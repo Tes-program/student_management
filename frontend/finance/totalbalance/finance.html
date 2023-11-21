@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/finance/totalbalance/finance.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar and tabs remain the same -->
+    <div class="navbar">
+        <i class="fas fa-user-graduate" style="text-align: center; font-size: 2em; margin-top: 4px;"></i>
+        <div class="tabs">
+          <div class="tab"><a href="/frontend/overview/overview.html">Overview</a></div>
+          <div class="tab"><a href="/frontend/personal-details/personal.html">Personal Details</a></div>
+          <div class="dropdown">
+            <div class="tab dropbtn">Registration</div>
+            <div class="dropdown-content">
+              <a href="/frontend/registration/residence/residence.html">Residence</a>
+              <a href="/frontend/registration/courses/courses.html">Courses</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="tab">Academic Details</div>
+            <div class="dropdown-content">
+              <a href="/frontend/academicdetails/result/result.html">Semester Result</a>
+              <a href="/frontend/academicdetails/transcript/transcript.html">Unofficial Transcript</a>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <div class="tab">Finance</div>
+            <div class="dropdown-content">
+              <a href="/frontend/finance/totalbalance/finance.html">Total Balance</a>
+              <a href="/frontend/finance/invoice/invoice.html">Invoice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="total-balance">
+        <h1>Total Balance</h1>
+    
+        <!-- Transaction History Section -->
+        <div class="section">
+          <h2>Transaction History</h2>
+          <div class="content" id="transactionHistory">
+            <!-- Placeholder for transaction history content -->
+            <p>No transactions yet.</p>
+          </div>
+        </div>
+    
+        <!-- Payments Section -->
+        <div class="section">
+          <h2>Payments</h2>
+          <div class="content" id="payments">
+            <!-- Placeholder for payments content -->
+            <p>No payments made.</p>
+          </div>
+        </div>
+    
+        <!-- Total Balance Overview Section -->
+        <div class="section">
+          <h2>Total Balance Overview</h2>
+          <div class="content" id="totalBalanceOverview">
+            <!-- Placeholder for total balance overview content -->
+            <p>Total Balance: $0.00</p>
+          </div>
+        </div>
+      </div>
+      
+
+  <!-- Add your scripts here, if any -->
+  <script src="/frontend/finance/totalbalance/finance.js"></script>
+</body>
+</html>

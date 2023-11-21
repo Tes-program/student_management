@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/registration/courses/courses.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar and tabs remain the same -->
+    <div class="navbar">
+        <i class="fas fa-user-graduate" style="text-align: center; font-size: 2em; margin-top: 4px;"></i>
+        <div class="tabs">
+          <div class="tab"><a href="/frontend/overview/overview.html">Overview</a></div>
+          <div class="tab"><a href="/frontend/personal-details/personal.html">Personal Details</a></div>
+          <div class="dropdown">
+            <div class="tab dropbtn">Registration</div>
+            <div class="dropdown-content">
+              <a href="/frontend/registration/residence/residence.html">Residence</a>
+              <a href="/frontend/registration/courses/courses.html">Courses</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="tab">Academic Details</div>
+            <div class="dropdown-content">
+              <a href="/frontend/academicdetails/result/result.html">Semester Result</a>
+              <a href="/frontend/academicdetails/transcript/transcript.html">Unofficial Transcript</a>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <div class="tab">Finance</div>
+            <div class="dropdown-content">
+              <a href="/frontend/finance/totalbalance/finance.html">Total Balance</a>
+              <a href="/frontend/finance/invoice/invoice.html">Invoices</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Content for the "Personal Details" page -->
+    
+  <div class="course">
+    <h1>Course Selection</h1>
+
+<div class="search">
+   <i class="fas fa-search"></i> <input class="input-search" type="text" placeholder="Search for a course" style="background-color: transparent; border: none; outline: none;">
+  </div>
+
+  
+  <div class="courses">
+    <!-- Course items will be dynamically generated here -->
+    <!-- Manually create course items for demonstration -->
+    <div class="course-item" data-course="frontend Management Systems">frontend Management Systems</div>
+    <div class="course-item" data-course="Web Development">Web Development</div>
+    <!-- Add other course items as needed -->
+</div>
+
+<button id="submitCourses">Submit</button>
+
+  <!-- Add your scripts here, if any -->
+  <script src="/frontend/registration/courses/courses.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+:root {
+  --solid: #070707;
+  --medium-solid: #333333;
+  --light-solid: #797979;
+  --very-light-solid: #bebebe;
+  --madly-light-solid: rgb(226, 226, 226);
+  --font-family: 'Montserrat', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, white, rgb(230, 230, 230));
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 12px;
+  height: 100vh; 
+  /* Remove min-height to allow the height to fit the content */
+}
+
+.navbar {
+  background: var(--solid);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 0 25px 25px 0;
+  height: 100%;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.tab {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab:hover {
+  background: #555;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  text-align: center;
+  padding: 0.5em;
+  width: fit-content;
+}
+
+/* Change the background color of the dropdown links on hover */
+.dropdown-content a {
+  color: #f1f1f1;
+  font-size: 0.95em;
+  margin-bottom: 0.4em;
+  padding: 0.2em;
+}
+
+.dropdown-content a:active {
+  color: #f1f1f1;
+}
+
+.dropdown-content a:hover {
+  background-color: #1d1d1d;
+  transition: ease-out 0.2s;
+}
+
+.content > h1 {
+  text-align: center;
+  padding: 0.3em;
+  padding-bottom: 1em;
+}
+/* Your existing styles here */
+
+.semester-container{
+  border: 2px solid;
+  padding: 1em;
+  max-width: 750px;
+}
+.transcript-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transcript-table th, .transcript-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.transcript-table th {
+  background-color: #f2f2f2;
+}
+
+.tab a{
+  color: #fff;
+  text-decoration: none;
+}
+.tab a:visited{
+  color: #fff;
+  text-decoration: none;
+}
+.tab a:active{
+  color: #fff;
+  text-decoration: none;
+}table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.result-table {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  overflow-x: auto;
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--light-solid);
+}
+
+th {
+  background-color: var(--solid);
+  color: white;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .result-table {
+      overflow-x: auto;
+  }
+
+  table {
+      font-size: 14px;
+  }
+
+  th,
+  td {
+      padding: 10px;
+  }
+}
+
+.tab a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tab a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tab a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.personal-details {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--solid);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.personal-details>p {
+  margin-right: 1em;
+  font-size: 1.2em;
+}
+.personal-details p span{
+  font-weight: 600;
+  display: block;
+}

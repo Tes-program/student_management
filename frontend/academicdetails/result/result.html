@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/academicdetails/result/result.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar and tabs remain the same -->
+    <div class="navbar">
+        <i class="fas fa-user-graduate" style="text-align: center; font-size: 2em; margin-top: 4px;"></i>
+        <div class="tabs">
+          <div class="tab"><a href="/frontend/overview/overview.html">Overview</a></div>
+          <div class="tab"><a href="/frontend/personal-details/personal.html">Personal Details</a></div>
+          <div class="dropdown">
+            <div class="tab dropbtn">Registration</div>
+            <div class="dropdown-content">
+              <a href="/frontend/registration/residence/residence.html">Residence</a>
+              <a href="/frontend/registration/courses/courses.html">Courses</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="tab">Academic Details</div>
+            <div class="dropdown-content">
+              <a href="/frontend/academicdetails/result/result.html">Semester Result</a>
+              <a href="/frontend/academicdetails/transcript/transcript.html">Unofficial Transcript</a>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <div class="tab">Finance</div>
+            <div class="dropdown-content">
+              <a href="/frontend/finance/totalbalance/finance.html">Total Balance</a>
+              <a href="/frontend/finance/invoice/invoice.html">Invoices</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <div class="semester">
+        <h1>Semester Result</h1>
+        
+        <div class="content" id="content">
+            <div class="result-table" id="resultTable"></div>
+        </div>
+    </div>
+    <script src="/frontend/academicdetails/result/result.js"></script>
+</body>
+</html>
