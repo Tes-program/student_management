@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// Prisma schema for the PersonalDetails table
+model PersonalDetails {
+  StudentID            Int                    @id @default(autoincrement())
+  FirstName            String
+  LastName             String
+  MatricNumber         String                 @unique
+  DateOfBirth          DateTime
+  Gender               String
+  Email                String                 @unique
+  Phone                String                 @unique
+  Address              String
+  CourseofStudy        String
+  Residence            String
+  AccountNumber        Int
+  UnofficialTranscript UnofficialTranscript[]
+  FinanceSummary       FinanceSummary[]
+  Invoices             Invoices[]
+  Registrations        Registrations[]
+  SemesterResults      SemesterResults[]
+  Users                 Users[]
+}
+
+// Prisma schema for the Users table
+model Users {
+  UserID          Int             @id @default(autoincrement())
+  Username        String          @unique
+  Password        String
+  Overview        Overview[]
+  PersonalDetails PersonalDetails []
+}
+
+// Prisma schema for the Overview table
+model Overview {
+  OverviewID Int    @id @default(autoincrement())
+  UserID     Int
+  GPA        Float
+  Timetable  String
+  Users      Users  @relation(fields: [UserID], references: [UserID])
+}
+
+// Prisma schema for the Courses table
+model Courses {
+  CourseCode              String                @id @unique
+  CourseTitle            String
+  Registrations          Registrations[]
+  SemesterResults        SemesterResults[]
+  Timetable              Timetable[]
+}
+
+// Prisma schema for the Registrations table
+model Registrations {
+  RegistrationID  Int             @id @default(autoincrement())
+  MatricNumber    String
+  CourseCode      String
+  SubmissionDate  DateTime
+  PersonalDetails PersonalDetails @relation(fields: [MatricNumber], references: [MatricNumber])
+  Courses         Courses         @relation(fields: [CourseCode], references: [CourseCode])
+}
+
+// Prisma schema for the UnofficialTranscript table
+model UnofficialTranscript {
+  TranscriptID    Int             @id @default(autoincrement())
+  MatricNumber    String
+  GraduationDate  DateTime
+  University      String
+  TotalCredits    Int?
+  TotalGPA        Float?
+  PersonalDetails PersonalDetails @relation(fields: [MatricNumber], references: [MatricNumber])
+}
+
+// Prisma schema for the FinanceSummary table
+model FinanceSummary {
+  FinanceID       Int             @id @default(autoincrement())
+  StudentID       Int
+  TotalBalance    Float
+  PersonalDetails PersonalDetails @relation(fields: [StudentID], references: [StudentID])
+}
+
+// Prisma schema for the Invoices table
+model Invoices {
+  InvoiceID       Int             @id @default(autoincrement())
+  StudentID       Int
+  InvoiceDate     DateTime
+  DueDate         DateTime
+  Amount          Float
+  PersonalDetails PersonalDetails @relation(fields: [StudentID], references: [StudentID])
+}
+
+// Prisma schema for the SemesterResults table
+model SemesterResults {
+  ResultID         Int                @id @default(autoincrement())
+  MatricNumber     String
+  CurrentLevel     Int
+  CourseCode       String
+  Grade            String
+  Credits          Int
+  Semester         Int
+  SGPA             Float?
+  CGPA             Float?
+  GradePoint       Float?
+  PersonalDetails  PersonalDetails    @relation(fields: [MatricNumber], references: [MatricNumber])
+  Courses          Courses            @relation(fields: [CourseCode], references: [CourseCode])
+}
+
+
+
+// Prisma schema for the Timetable table
+model Timetable {
+  TimetableID Int    @id @default(autoincrement())
+  Weekday     String
+  CourseCode  String
+  Lecturer    String
+  Venue       String
+  Courses     Courses @relation(fields: [CourseCode], references: [CourseCode])
+}
